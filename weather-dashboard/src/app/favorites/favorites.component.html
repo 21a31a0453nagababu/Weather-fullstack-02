@@ -1,18 +1,58 @@
-<div class="favorites-container p-6 rounded-2xl w-full max-w-md mx-auto
-            bg-white/10 backdrop-blur-sm border border-white/20">
+<div
+  class="favorites-container p-6 rounded-2xl w-full max-w-md mx-auto bg-white/10 backdrop-blur-sm border border-white/20"
+>
   <h2 class="text-xl font-semibold text-white-800 mb-4">Favorites</h2>
   <ul *ngIf="favorites.length > 0; else noFavorites" class="space-y-2">
-    <li *ngFor="let city of favorites"
-        class="flex items-center justify-between p-3 bg-white/5 hover:bg-white/20
-              rounded-lg transition duration-200">
-      <span class="text-gray-800 font-medium">{{ city }}</span>
-      <button (click)="removeFavorite(city)"
-              class="text-red-400 hover:text-red-600 transition duration-200">
-        ❌
-      </button>
+    <li
+      *ngFor="let city of favorites"
+      class="flex items-center justify-between p-3 bg-white/5 hover:bg-white/20 rounded-lg transition duration-200"
+    >
+      <div class="flex-grow">
+        <ng-container *ngIf="editingCity === city; else displayCity">
+          <div class="flex items-center gap-2">
+            <input
+              [(ngModel)]="editedCityName"
+              class="bg-transparent border-none focus:outline-none text-gray-800 font-medium flex-grow"
+              (keyup.enter)="saveEdit()"
+              (keyup.escape)="cancelEdit()"
+            />
+            <button
+              (click)="saveEdit()"
+              class="text-green-400 hover:text-green-600 transition duration-200"
+            >
+              ✓
+            </button>
+            <button
+              (click)="cancelEdit()"
+              class="text-gray-400 hover:text-gray-600 transition duration-200"
+            >
+              ✕
+            </button>
+          </div>
+        </ng-container>
+        <ng-template #displayCity>
+          <span class="text-gray-800 font-medium">{{ city }}</span>
+        </ng-template>
+      </div>
+      <div class="flex items-center gap-2">
+        <button
+          (click)="startEditing(city)"
+          class="text-blue-400 hover:text-blue-600 transition duration-200"
+        >
+          ✎
+        </button>
+        <button
+          (click)="removeFavorite(city)"
+          class="text-red-400 hover:text-red-600 transition duration-200"
+        >
+          ❌
+        </button>
+      </div>
     </li>
   </ul>
   <ng-template #noFavorites>
-    <p class="text-white-500/80 text-sm text-center">No favorite cities added yet.</p>
+    <p class="text-white-500/80 text-sm text-center">
+      No favorite cities added yet.
+    </p>
   </ng-template>
 </div>

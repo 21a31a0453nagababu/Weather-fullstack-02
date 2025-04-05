@@ -29,4 +29,14 @@ export class FavoritesService {
     localStorage.setItem(this.storageKey, JSON.stringify(favorites));
     this.favoritesSubject.next(favorites);
   }
+
+  updateFavorite(oldCity: string, newCity: string): void {
+    let favorites = this.getFavorites();
+    const index = favorites.indexOf(oldCity);
+    if (index !== -1 && !favorites.includes(newCity)) {
+      favorites[index] = newCity;
+      localStorage.setItem(this.storageKey, JSON.stringify(favorites));
+      this.favoritesSubject.next(favorites);
+    }
+  }
 }
