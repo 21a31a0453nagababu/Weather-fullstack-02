@@ -5694,19 +5694,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rassa\\.nuget\\packages\\": {}
+    "C:\\Users\\M HXICM HOIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rassa\\weatherDashF-B - Cursor\\WeatherApi\\WeatherApi.csproj",
+      "projectUniqueName": "C:\\Users\\M HXICM HOIN\\techmproject03\\weatherNew\\weatherApi\\WeatherApi.csproj",
       "projectName": "WeatherApi",
-      "projectPath": "C:\\Users\\rassa\\weatherDashF-B - Cursor\\WeatherApi\\WeatherApi.csproj",
-      "packagesPath": "C:\\Users\\rassa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rassa\\weatherDashF-B - Cursor\\WeatherApi\\obj\\",
+      "projectPath": "C:\\Users\\M HXICM HOIN\\techmproject03\\weatherNew\\weatherApi\\WeatherApi.csproj",
+      "packagesPath": "C:\\Users\\M HXICM HOIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\M HXICM HOIN\\techmproject03\\weatherNew\\weatherApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rassa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\M HXICM HOIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -5796,7 +5796,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
